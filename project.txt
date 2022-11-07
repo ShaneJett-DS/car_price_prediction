@@ -1,0 +1,20 @@
+Use regression models to predict the price of a car
+
+Models: Linear Regression
+
+Dependent Variable: "Price"
+
+
+ *Are body attributes like weight and wheelbase or engine attributes better predictors of a cars price.
+
+Independent Variables #1: "wheelbase	carlength	carwidth	carheight	curbweight" 
+Independent Variables #2: "enginesize  boreratio  stroke  compression ratio  horsepower citympg highwaympg peakrpm"
+
+
+* Create Two Scatter matricies 1) Body attributes with "Price" 2) Engine attributes with "Price"
+
+* Create a correlation matrix heat map 
+    - Filter for varibles with moderate-to-strong linear correlation coefficient
+
+* Scale data 
+
