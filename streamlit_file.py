@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import os
-import plotly as go
+
 
 
 cwd = os.getcwd()
