@@ -80,6 +80,8 @@ with eda_3:
     fig = px.scatter(body_data, x="price", y="curbweight", title="Curb Weight vs Price", trendline="ols")
     st.plotly_chart(fig)    
     
+    fig2 = px.scatter(engine_data, x="price", y="enginesize", title="Engine Size vs Price", trendline="ols")
+    st.plotly_chart(fig2)   
 with END:
 
     st.write("End")
