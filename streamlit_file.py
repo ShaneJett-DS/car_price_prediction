@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import os
 import matplotlib.pyplot as plt
-
+import seaborn as sns
 
 
 cwd = os.getcwd()
@@ -54,14 +54,16 @@ with eda_2:
     st.header("3. Create Correlation Matrices")
     body_corr = body_data.corr()
     eng_corr = engine_data.corr()
+    heat_fig = sns.heatmap(body_corr)
 
     st.subheader("Body data Correlation Matrix")
     st.table(body_corr)
+    st.show(heat_fig)
     st.subheader("Engine data Correlation Matrix")
     st.table(eng_corr)
   
     # Create scatterplots to visualize linear relatiionships
-
+    
     
 
 
