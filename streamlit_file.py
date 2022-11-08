@@ -62,7 +62,7 @@ with eda_2:
     
     fig, ax = plt.subplots(figsize=(12,8))
     sns.heatmap(body_corr, cmap="Blues", annot=True)
-    plt.title("Body Data vs Price Correlation Matrix", fontsize=20)
+    plt.title("Body Data vs Price Correlation Heatmap", fontsize=20)
     st.pyplot(fig)
 
     st.subheader("Engine data Correlation Matrix")
@@ -70,11 +70,14 @@ with eda_2:
 
     fig2, ax2 = plt.subplots(figsize=(12,8))
     sns.heatmap(eng_corr, cmap="Blues", annot=True)
-    plt.title("Body Data vs Price Correlation Matrix", fontsize=20)
+    plt.title("Body Data vs Price Correlation Heatmap", fontsize=20)
     st.pyplot(fig2)
 
+with eda_3:
+    st.header("Analyze the linear relationships")
 
-        
+    fig = px.scatter(body_data, x="price", y="curbweight", title="Curb Weight vs Price", trendline="ols")
+    st.pyplot(fig)    
     
 with END:
 
