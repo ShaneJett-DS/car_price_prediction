@@ -64,7 +64,10 @@ with eda_2:
   
     # Create scatterplots to visualize linear relatiionships
     
-    
+    fig, ax = plt.subplots(figsize=(12,8))
+    sns.heatmap(body_corr, cmap="Blues", annot=True)
+    plt.title("Body Data vs Price Correlation Matrix", fontsize=20)
+    st.show(fig)
 
 
 with END:
