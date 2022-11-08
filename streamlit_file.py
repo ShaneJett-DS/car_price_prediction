@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+import seaborn as sns
 import os
 
 
@@ -54,11 +55,15 @@ with eda_2:
     body_corr = body_data.corr()
     eng_corr = engine_data.corr()
 
+    fig, ax = plt.subplots()
+    
     st.subheader("Body data Correlation Matrix")
-    st.table(body_corr)
-    st.subheader("Engine data Correlation Matrix")
-    st.table(eng_corr)
+    sns.heatmap(body_corr, ax=ax)
+    st.write(fig)
 
+    #st.subheader("Engine data Correlation Matrix")
+    #st.table(eng_corr)
+  
     #fig, ax = plt.subplots(figsize=(12,8))
     #sns.heatmap(body_corr, cmap="Blues", annot=True)
     #plt.title("Body Data vs Price Correlation Matrix", fontsize=20)
