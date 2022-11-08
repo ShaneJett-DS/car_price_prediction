@@ -73,8 +73,7 @@ with eda_2:
     plt.title("Body Data vs Price Correlation Matrix", fontsize=20)
     st.pyplot(fig2)
 
-with eda_2:
-    # Create scatterplots to visualize linear relatiionships
+
         
     
 with END:
