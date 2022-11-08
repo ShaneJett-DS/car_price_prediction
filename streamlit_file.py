@@ -5,6 +5,8 @@ import plotly.express as px
 
 cwd = os.getcwd()
 
+
+# Create containers for Web Application
 header = st.container()
 dataset = st.container()
 eda = st.container()
