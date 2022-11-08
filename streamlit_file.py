@@ -59,7 +59,7 @@ with eda_2:
     st.subheader("Body data Correlation Matrix")
     st.table(body_corr)
   
-    # Create scatterplots to visualize linear relatiionships
+    
     fig, ax = plt.subplots(figsize=(12,8))
     sns.heatmap(body_corr, cmap="Blues", annot=True)
     plt.title("Body Data vs Price Correlation Matrix", fontsize=20)
@@ -68,6 +68,14 @@ with eda_2:
     st.subheader("Engine data Correlation Matrix")
     st.table(eng_corr)
 
+    fig2, ax2 = plt.subplots(figsize=(12,8))
+    sns.heatmap(engine_corr, cmap="Blues", annot=True)
+    plt.title("Body Data vs Price Correlation Matrix", fontsize=20)
+    st.pyplot(fig2)
+
+with eda_2:
+    # Create scatterplots to visualize linear relatiionships
+        
     
 with END:
 
