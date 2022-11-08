@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import os
+import matplotlib
 
 
 
@@ -59,10 +60,9 @@ with eda_2:
     st.subheader("Engine data Correlation Matrix")
     st.table(eng_corr)
   
-    #fig, ax = plt.subplots(figsize=(12,8))
-    #sns.heatmap(body_corr, cmap="Blues", annot=True)
-    #plt.title("Body Data vs Price Correlation Matrix", fontsize=20)
-    #plt.show()
+    # Create scatterplots to visualize linear relatiionships
+
+    st.
 
 
 with END:
