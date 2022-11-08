@@ -40,7 +40,7 @@ with eda_1:
     st.bar_chart(top_10_make)
 
 with eda_2:
-    st.header("Separate the data into two Categories to compare thier linear relationship:")
+    st.title("Separate the data into two Categories to compare thier linear relationship:")
     st.text("1. Engine Data")
     st.text("2. Chassis/Body Data")
 
@@ -50,14 +50,14 @@ with eda_2:
     engine_data = data[["price", "enginesize", "boreratio", "stroke", "compressionratio", "horsepower", "citympg", "highwaympg", "peakrpm"]]
 
     # Display a correlation matix for each of the dataframes
-    st.subheader("3. Create Correlation Matrices")
+    st.header("3. Create Correlation Matrices")
     body_corr = body_data.corr()
     eng_corr = engine_data.corr()
 
-    st.title("Body data Correlation Matrix")
+    st.subheader("Body data Correlation Matrix")
     st.table(body_corr)
-    st.title("Engine data Correlation Matrix")
-    st.table()
+    st.subheader("Engine data Correlation Matrix")
+    st.table(eng_corr)
 
     #fig, ax = plt.subplots(figsize=(12,8))
     #sns.heatmap(body_corr, cmap="Blues", annot=True)
