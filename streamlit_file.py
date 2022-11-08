@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import os
-import matplotlib
+import matplotlib.pyplot as plt
 
 
 
