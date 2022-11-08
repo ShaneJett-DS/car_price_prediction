@@ -62,7 +62,7 @@ with eda_2:
   
     # Create scatterplots to visualize linear relatiionships
 
-    st.
+    
 
 
 with END:
