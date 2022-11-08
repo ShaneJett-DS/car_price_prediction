@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import os
+import plotly.graph_objects as go
 
 
 cwd = os.getcwd()
@@ -29,8 +30,8 @@ with eda:
     top_10_make = pd.Series(data["Make"].value_counts().head(n=10))
     top_10_make_perc = pd.Series(data["Make"].value_counts(normalize=True).head(n=10))
 
-
-    st.plotly_chart(top_10_make)
+    fig = go.Figure()
+    st.plotly_chart(go.bar(top_10_make))
     
     #st.plotly_chart(top_10_make_perc)
 
