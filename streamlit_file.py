@@ -63,7 +63,7 @@ with eda_2:
     fig, ax = plt.subplots(figsize=(12,8))
     sns.heatmap(body_corr, cmap="Blues", annot=True)
     plt.title("Body Data vs Price Correlation Matrix", fontsize=20)
-    st.show(fig)
+    st.pyplot(fig)
 
     st.subheader("Engine data Correlation Matrix")
     st.table(eng_corr)
