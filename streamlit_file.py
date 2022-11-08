@@ -15,6 +15,7 @@ eda_2 = st.container()
 eda_3 = st.container()
 eda_4 = st.container()
 eda_5 = st.container()
+END = st.container()
 random = st.container()
 
 
@@ -41,7 +42,7 @@ with eda_1:
    
 
 with eda_2:
+    pass
+with END:
 
-
-
-st.write("End")
+    st.write("End")
