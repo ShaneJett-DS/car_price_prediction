@@ -32,7 +32,7 @@ with eda:
 
     st.plotly_chart(top_10_make)
     
-    st.plotly_chart(top_10_make_perc)
+    #st.plotly_chart(top_10_make_perc)
 
 
 
