@@ -76,6 +76,7 @@ with eda_2:
 
 with eda_3:
     st.header("Analyze the linear relationships")
+    st.text("Some description of the method and goals of the analysis")
 
     fig = px.scatter(body_data, x="price", y="curbweight", title="Curb Weight vs Price", trendline="ols")
     st.plotly_chart(fig)    
