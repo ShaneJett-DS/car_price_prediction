@@ -10,7 +10,11 @@ cwd = os.getcwd()
 # Create containers for Web Application
 header = st.container()
 dataset = st.container()
-eda = st.container()
+eda_1 = st.container()
+eda_2 = st.container()
+eda_3 = st.container()
+eda_4 = st.container()
+eda_5 = st.container()
 random = st.container()
 
 
@@ -23,22 +27,20 @@ with dataset:
     data = pd.read_csv(cwd + "/Car_Price_Pred.csv")
     st.dataframe(data.head())
 
-with eda:
+with eda_1:
     # Create make column using CarName variable
     # Find the count of make
     data["Make"] = data["CarName"].str.split(" ").str[0]
-    top_10_make = pd.Series(data["Make"].value_counts(ascending=False).head(n=10))
+    top_10_make = pd.Series(data["Make"].value_counts().head(n=10))
+    top_10_make = top_10_make.sort_values(ascending=False)
     top_10_make_perc = pd.Series(data["Make"].value_counts(normalize=True).head(n=10))
 
     st.title("Top 10 Makes in Dataset")
-    st.bar_chart(top_10_make.sort_values(ascending=False))
+    st.bar_chart(top_10_make)
 
-    #fig = go.Figure()
-    #st.plotly_chart(go.bar(top_10_make))
-    
-    #st.plotly_chart(top_10_make_perc)
+   
 
-
+with eda_2:
 
 
 
