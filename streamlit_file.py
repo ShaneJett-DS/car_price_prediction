@@ -30,10 +30,10 @@ with eda:
     top_10_make_perc = pd.Series(data["Make"].value_counts(normalize=True).head(n=10))
 
 
-    st.table(px.bar(top_10_make))
+    st.plotly_chart(top_10_make)
+    
+    st.plotly_chart(top_10_make_perc)
 
-
-    st.table(px.bar(top_10_make_perc))
 
 
 
