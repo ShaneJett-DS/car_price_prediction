@@ -49,9 +49,15 @@ with eda_2:
     body_data = data[["price", "wheelbase", "carlength", "carwidth", "carheight", "curbweight"]]
     engine_data = data[["price", "enginesize", "boreratio", "stroke", "compressionratio", "horsepower", "citympg", "highwaympg", "peakrpm"]]
 
-    st.subheader("3. Create Correlation Matrices & Heatmaps")
+    # Display a correlation matix for each of the dataframes
+    st.subheader("3. Create Correlation Matrices")
     body_corr = body_data.corr()
+    eng_corr = engine_data.corr()
+
+    st.title("Body data Correlation Matrix")
     st.table(body_corr)
+    st.title("Engine data Correlation Matrix")
+    st.table()
 
     #fig, ax = plt.subplots(figsize=(12,8))
     #sns.heatmap(body_corr, cmap="Blues", annot=True)
