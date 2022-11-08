@@ -27,7 +27,7 @@ with eda:
     # Create make column using CarName variable
     # Find the count of make
     data["Make"] = data["CarName"].str.split(" ").str[0]
-    top_10_make = pd.Series(data["Make"].value_counts().head(n=10))
+    top_10_make = pd.Series(data["Make"].value_counts(ascending=False).head(n=10))
     top_10_make_perc = pd.Series(data["Make"].value_counts(normalize=True).head(n=10))
 
     st.title("Top 10 Makes in Dataset")
