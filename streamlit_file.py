@@ -1,12 +1,13 @@
 import streamlit as st
 import pandas as pd
 import os
+import plotly.express as px
 
 cwd = os.getcwd()
 
 header = st.container()
 dataset = st.container()
-features = st.container()
+eda = st.container()
 random = st.container()
 
 
@@ -19,6 +20,18 @@ with dataset:
     data = pd.read_csv(cwd + "/Car_Price_Pred.csv")
     st.dataframe(data.head())
 
+with eda:
+    # Create make column using CarName variable
+    # Find the count of make
+    data["Make"] = data["CarName"].str.split(" ").str[0]
+    top_10_make = pd.Series(data["Make"].value_counts().head(n=10))
+    top_10_make_perc = pd.Series(data["Make"].value_counts(normalize=True).head(n=10))
+
+
+    st.table(px.bar(top_10_make))
+
+
+    st.table(px.bar(top_10_make_perc))
 
 
 
