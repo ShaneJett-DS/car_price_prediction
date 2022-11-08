@@ -14,10 +14,10 @@ with header:
     st.title("Car Price Prediction")
 
 with dataset:
-    st.header("Test header")
+    st.header("The Dataset")
     st.text("Some descriptive text")
     data = pd.read_csv(cwd + "/Car_Price_Pred.csv")
-    st.dataframe(data.head(n=10))
+    st.dataframe(data.head())
 
 
 
