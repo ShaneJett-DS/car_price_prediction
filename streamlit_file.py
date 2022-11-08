@@ -26,7 +26,8 @@ with header:
 
 with dataset:
     st.header("The Dataset")
-    st.text("Some descriptive text")
+    st.text("Describe the Dataset")
+    st.text("Describe the goal of the Project")
     data = pd.read_csv(cwd + "/Car_Price_Pred.csv")
     st.dataframe(data.head())
 
