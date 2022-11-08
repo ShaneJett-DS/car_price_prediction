@@ -30,6 +30,7 @@ with eda:
     top_10_make = pd.Series(data["Make"].value_counts().head(n=10))
     top_10_make_perc = pd.Series(data["Make"].value_counts(normalize=True).head(n=10))
 
+    st.title("Top 10 Makes in Dataset")
     st.bar_chart(top_10_make)
 
     #fig = go.Figure()
