@@ -39,10 +39,12 @@ with eda_1:
     st.title("Top 10 Makes in Dataset")
     st.bar_chart(top_10_make)
 
-   
-
 with eda_2:
-    pass
+    st.header("Separte the data into two Categories:")
+    st.subheader("1. Engine Data")
+    st.subheader("2. Chassis/Body Data")
+
+
 with END:
 
     st.write("End")
