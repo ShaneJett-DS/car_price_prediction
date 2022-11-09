@@ -17,6 +17,7 @@ eda_2 = st.container()
 eda_3 = st.container()
 eda_4 = st.container()
 eda_5 = st.container()
+model = st.container()
 END = st.container()
 random = st.container()
 
@@ -92,6 +93,22 @@ with eda_3:
 
     fig2a = px.scatter(engine_data, x="price", y="horsepower", title="Horsepower vs Price", trendline="ols")
     st.plotly_chart(fig2a)   
+
+with model:
+    st.header("Linear Regression Analysis")
+    st.subheader("Linear Regression Model")
+
+    st.subheader("RidgeCV Regression Model")
+
+    st.subheader("ElasticNetCV Model")
+
+    st.subheader("LassoCV Model")
+
+    st.subheader("BayesianRidgeCV Model")
+
+    st.subheader("SGDRegressor Model")
+
+
 with END:
 
     st.write("End")
