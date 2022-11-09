@@ -79,11 +79,19 @@ with eda_3:
     st.header("Analyze the linear relationships")
     st.text("Some description of the method and goals of the analysis")
 
-    fig = px.scatter(body_data, x="price", y="curbweight", title="Curb Weight vs Price", trendline="ols")
-    st.plotly_chart(fig)    
+    st.subheader("Body Variables vs Price")
+    fig1 = px.scatter(body_data, x="price", y="curbweight", title="Curb Weight vs Price", trendline="ols")
+    st.plotly_chart(fig1)    
     
-    fig2 = px.scatter(engine_data, x="price", y="enginesize", title="Engine Size vs Price", trendline="ols")
-    st.plotly_chart(fig2)   
+    fig2 = px.scatter(body_data, x="price", y="carwidth", title="Car Width vs Price", trendline="ols")
+    st.plotly_chart(fig2)
+    
+    st.subheader("Engine Variables vs Price")
+    fig1a = px.scatter(engine_data, x="price", y="enginesize", title="Engine Size vs Price", trendline="ols")
+    st.plotly_chart(fig1a) 
+
+    fig2a = px.scatter(engine_data, x="price", y="horsepower", title="Horsepower vs Price", trendline="ols")
+    st.plotly_chart(fig2a)   
 with END:
 
     st.write("End")
