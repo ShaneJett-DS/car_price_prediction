@@ -96,6 +96,8 @@ with eda_3:
 
 with model:
     st.header("Linear Regression Analysis")
+    
+
     st.subheader("Linear Regression Model")
 
     st.subheader("RidgeCV Regression Model")
