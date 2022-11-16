@@ -22,9 +22,13 @@ END = st.container()
 random = st.container()
 
 
+# Layout for the Web Application
+
+# Create project title
 with header:
     st.title("Car Price Prediction")
 
+# Import Dataset and brief description
 with dataset:
     st.header("The Dataset")
     st.text("Describe the Dataset")
@@ -32,6 +36,11 @@ with dataset:
     data = pd.read_csv(cwd + "/Car_Price_Pred.csv")
     st.dataframe(data.head())
 
+### Missing ###
+### Put the purpose of the project here!!!! ###
+### Missing ###
+
+### Begin Exploring the Data
 with eda_1:
     # Create make column using CarName variable
     # Find the count of make
