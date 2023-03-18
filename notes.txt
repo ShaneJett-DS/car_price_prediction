@@ -18,3 +18,22 @@ Independent Variables #2: "enginesize  boreratio  stroke  compression ratio  hor
 
 * Scale data 
 
+
+**** Updated Notes  ******
+
+[Using the updated prompt]
+
+Ideas:
+    - There are 14 numerical variables. I will start by splitting the dataframe in half and select the variables from each half to build the final model.
+    -     
+
+Notes:
+
+    - Enginesize, Horsepower, and Curbweight have the strongest correlation coefficients.(all positively correlated)
+    - Carwidth, and carlength have a modarately positive correlation.
+    - citympg and highwaympg have modarately negative correlation coefficients. 
+
+    - *** With Price Outliers Removed: - Curbweight has the strongest correlation coefficient. Horsepower, enginesize, carheight, and car length all have
+                                        modaratly postive correlations with price.
+                                       - citympg and highwaympg have modarately negative correlations with price.
+                                        
